@@ -2,6 +2,20 @@ DEMOBLAZER TEST AUTOMATION
 
 Este proyecto de automatización de pruebas está construido con Karate y Maven para probar la funcionalidad de la aplicación web DemoBlaze.
 
+=== OBTENER EL CÓDIGO ===
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/demoblaze-automation.git
+   cd demoblaze-automation
+   ```
+
+2. O descargar como ZIP:
+   - Haz clic en el botón verde "Code" en la página principal del repositorio
+   - Selecciona "Download ZIP"
+   - Descomprime el archivo en tu directorio de trabajo
+   - Abre una terminal en el directorio descomprimido
+
 === REQUISITOS ===
 - Java JDK 17
 - Maven 3.6.0 o superior
