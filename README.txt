@@ -6,7 +6,7 @@ Este proyecto de automatización de pruebas está construido con Karate y Maven 
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/demoblaze-automation.git
+   git clone https://github.com/ceciliafarias/prueba_tecnica_karate.git
    cd demoblaze-automation
    ```
 
