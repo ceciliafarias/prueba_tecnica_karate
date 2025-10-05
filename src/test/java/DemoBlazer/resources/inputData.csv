@@ -1,0 +1,6 @@
+testCode,testName,userName,userPassword
+SIGNUP-001,Registrar un nuevo usuario,,
+SIGNUP-002,Registrar un usuario existente,mitchel.emard,hfcuk8a3rxtiqaz
+LOGIN-001,Iniciar sesión con credenciales correctas,mitchel.emard,hfcuk8a3rxtiqaz
+LOGIN-002,Iniciar sesión con credenciales incorrectas,mitchel.emard,password123
+LOGIN-003,Iniciar sesión con credenciales de usuario inexistente,,

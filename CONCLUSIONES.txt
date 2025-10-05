@@ -1,0 +1,63 @@
+Conclusiones Técnicas de la Prueba
+
+Durante la ejecución de las pruebas funcionales sobre la API, se identificaron los siguientes hallazgos relevantes relacionados con su comportamiento y cumplimiento de buenas prácticas de diseño REST:
+
+
+1. Ausencia de documentación oficial
+
+No se dispone de una documentación formal de la API (como Swagger u OpenAPI), lo que obligó a realizar un análisis exploratorio para identificar los endpoints, métodos HTTP y parámetros utilizados.
+Para ello, se accedió a la URL de la aplicación y, mediante el uso de las herramientas de desarrollador de Chrome, se observaron las solicitudes de red (Network) y se extrajeron los endpoints y métodos de manera manual.
+Esta falta de documentación dificulta la reproducibilidad de las pruebas, la trazabilidad de los resultados y la integración con otros equipos o entornos automatizados.
+
+
+2. Endpoint de registro
+
+Al realizar un registro exitoso, la API retorna como respuesta el valor "" (dos comillas vacías).
+Este comportamiento no cumple con los estándares REST, ya que ante una operación exitosa de creación o registro se espera una respuesta con un cuerpo JSON estructurado que contenga información mínima, como el identificador del nuevo recurso o un mensaje de confirmación.
+La ausencia de contenido válido dificulta la validación automatizada del resultado y la interpretación del estado de la transacción por parte del cliente.
+
+
+3. Endpoint de login
+
+Cuando el inicio de sesión se ejecuta correctamente, la respuesta del servicio contiene un string plano con el token de autenticación, por ejemplo:
+
+Auth_token: PHVzZXJOYW1lPjE3NjAyOTA=
+
+El retorno en texto plano no sigue las convenciones REST ni las buenas prácticas de seguridad.
+El token debería entregarse en un formato JSON estructurado, tal como:
+
+{ "auth_token": "PHVzZXJOYW1lPjE3NjAyOTA=" }
+
+De esta forma, se facilita el manejo del valor en clientes o pruebas automatizadas y se reduce la posibilidad de errores o vulnerabilidades.
+
+
+4. Endpoint de credenciales incorrectas
+
+Al ingresar credenciales inválidas, la API responde con la cadena "Wrong password.", lo que indica un manejo inconsistente de los errores.
+El servicio debería devolver un código de estado HTTP 401 (Unauthorized) junto con un mensaje en formato JSON, por ejemplo:
+
+{ "error": "Wrong password" }
+
+Este tipo de respuesta estructurada facilita la gestión de errores y mantiene la coherencia con los estándares de comunicación API.
+
+
+5. Endpoint de usuario inexistente
+
+En el caso de un usuario que no está registrado, el servicio retorna la cadena "User does not exist." como texto plano.
+Al igual que en el punto anterior, el formato no cumple con los estándares REST.
+La respuesta debería incluir un código de estado adecuado (404 o 400 según el contexto) y un cuerpo JSON, por ejemplo:
+
+{ "error": "User does not exist" }
+
+Esto permite una interpretación uniforme de las respuestas por parte de los clientes y facilita la automatización de las validaciones.
+
+
+6. Caso adicional: usuario no registrado
+
+Aunque este escenario no fue solicitado explícitamente en los requerimientos iniciales, se incluyó dentro de las pruebas para validar la robustez del servicio y su capacidad de manejar entradas no válidas.
+Este tipo de validaciones complementarias permite detectar comportamientos no controlados y mejorar la cobertura del testing funcional.
+
+Conclusión general
+
+Los resultados evidencian que la API presenta inconsistencias en la estandarización de sus respuestas y en la implementación de los códigos HTTP y formatos JSON esperados.
+Estas observaciones son relevantes para el proceso de mejora continua, ya que afectan la automatización, interoperabilidad, legibilidad y mantenimiento de las pruebas y del propio servicio.

@@ -1,0 +1,32 @@
+[
+    {
+        "testCode": "SIGNUP-001",
+        "testName": "Registrar un nuevo usuario",
+        "userName": "",
+        "userPassword": ""
+    },
+    {
+        "testCode": "SIGNUP-002",
+        "testName": "Registrar un usuario existente",
+        "userName": "mitchel.emard",
+        "userPassword": "hfcuk8a3rxtiqaz"
+    },
+    {
+        "testCode": "LOGIN-001",
+        "testName": "Iniciar sesión con credenciales correctas",
+        "userName": "mitchel.emard",
+        "userPassword": "hfcuk8a3rxtiqaz"
+    },
+    {
+        "testCode": "LOGIN-002",
+        "testName": "Iniciar sesión con credenciales incorrectas",
+        "userName": "mitchel.emard",
+        "userPassword": "password123"
+    },
+    {
+        "testCode": "LOGIN-003",
+        "testName": "Iniciar sesión con credenciales de usuario inexistente",
+        "userName": "",
+        "userPassword": ""
+    }
+]

@@ -1,0 +1,171 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Mac
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Karate
+**/karate-reports/
+**/surefire-reports/
+**/target/
+**/cucumber-html-reports/
+
+# Environment files
+.env
+*.env
+
+# IDE specific files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build files
+build/
+.gradle/
+
+# Local configuration files
+*.properties
+*.yaml
+*.yml
+!.github/workflows/*.yml
+
+# Node modules (if using Karate UI)
+node_modules/
+
+# Dependency directories
+lib/
+libs/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test reports
+**/test-output/
+**/test-results/
+**/surefire-reports/
+**/failsafe-reports/
+**/target/surefire-reports/
+**/target/failsafe-reports/
+**/target/site/jacoco/
+**/jacoco.exec
+**/jacoco-it.exec
+**/coverage/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IDE specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Build output
+target/
+build/
+out/
+
+# Local configuration files
+*.local
+*.local.*
+!.env.local
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
